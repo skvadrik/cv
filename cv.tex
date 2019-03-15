@@ -1,0 +1,159 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[margin=2cm]{geometry}
+\usepackage{url}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{1em}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubheadingShort}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\small{#1}} & \textit{\small #2} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\pagenumbering{gobble}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\Large{Ulya Trofimovich}} & London, UK \\
+                                      & E-mail: \texttt{skvadrik@gmail.com} \\
+                                      & Mobile: +44 7899 602 542 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Belarusian State University (BSU)}{Minsk, Belarus}
+      {Bachelor's Degree in Mathematics and Systems Programming}{2008 -- 2013}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {VirusBlokAda LTD}{Minsk, Belarus}
+      {Software Engineer}{Aug. 2011 -- Aug. 2014}
+      \resumeItemListStart
+        \resumeItem{Anti-Virus Kernel}
+          {co-developed a processor emulator for x86 ISA family.}
+        \resumeItem{Malware classification system}
+          {developed a fast pre-filter to the anti-virus kernel
+          that classifies incoming malware samples into categories.}
+        \resumeItem{Regular expression library}
+          {developed a library for Perl5-compatible regular expressions.}
+        \resumeItem{JavaScript emulator}
+          {developed an ECMAScript-5.1 conforming interpreter for malware emulation in a sandboxed environment.
+          All interpreter components including the standard library were developed from scratch in C++.
+          This involved a lot of performance testing and writing helper tools and utilities.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Open Source}{}
+      {Software Engineer}{2011 -- present day}
+      \resumeItemListStart
+        \resumeItem{RE2C lexer generator}
+          {a tool for generating fast lexical analyzers for C and C++,
+          used for example by such projects as PHP and Ninja.
+          Contributions: added Unicode support,
+          developed and implemented efficient algorithm for submatch extraction,
+          developed self-validation tools,
+          implemented numerous optimizations,
+          updated project documentation.
+          Homepage: \url{http://re2c.org}
+          }
+        \resumeItem{LALR2C parser generator}
+          {developed a tool for generating fast LALR(1) parsers for C and C++. Homepage: \url{https://github.com/skvadrik/lalr2c}}
+        \resumeItem{Other}
+          {Contributed patches to open source projects: the Glorious Glasgow Haskell compiler, Midnight Commander, xxdiff, yasm.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------RESEARCH-----------------
+\section{Research}
+  \resumeSubHeadingListStart
+
+    \resumeSubheadingShort{Tagged Deterministic Finite Automata with Lookahead}{Feb. 2015 - Aug. 2017}
+      \small{Studied efficient submatch extraction in regular expressions, POSIX disambiguation semantics,
+      and the application of the above to performance-oriented generators of lexical analyzers like RE2C.
+      Wrote a paper: \url{http://re2c.org/2017_trofimovich_tagged_deterministic_finite_automata_with_lookahead.pdf}}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\section{Skills}
+  \resumeSubHeadingListStart
+
+    \resumeSubItem{Languages}{C, C++ (proficient); Haskell, Bash (basic); Assembly (basic understanding, mostly x86).}
+    \resumeSubItem{Operating systems}{Gentoo Linux (basic usage).}
+    \resumeSubItem{Profiling and debugging tools}{valgrind, perf, strace, GCC/Clang sanitizers, objdump, etc.}
+    \resumeSubItem{Parsing tools}{
+    UNIX text-processing utilities (grep, sed),
+    lexer generators (RE2C, Flex, Alex),
+    parser generators (YACC, Bison, Happy),
+    parser combinators (Parsec); good understanding of parsing theory.}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------FIELDS OF INTEREST-----------------
+\section{Fields of interest}
+    \small{Compiler construction, program analysis and transformation, code generation, formal languages and automata.}
+
+%-------------------------------------------
+\end{document}
